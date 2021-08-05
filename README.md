@@ -1,1 +1,2 @@
-# Api_Catalogo_Jogos
+# Api Catalogo Jogos
+## Api desenvolvida em .NET 5
