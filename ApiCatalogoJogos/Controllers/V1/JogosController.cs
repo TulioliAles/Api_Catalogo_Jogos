@@ -1,8 +1,8 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using ApiCatalogoJogos.InputDto;
+using ApiCatalogoJogos.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace ApiCatalogoJogos.Controllers.V1
@@ -12,25 +12,25 @@ namespace ApiCatalogoJogos.Controllers.V1
     public class JogosController : ControllerBase
     {
         [HttpGet]
-        public async Task<ActionResult<List<object>>> GetListaJogo()
+        public async Task<ActionResult<List<JogoViewDto>>> GetListaJogo()
         {
             return Ok();
         }
 
         [HttpGet("{idJogo:guid}")]
-        public async Task<ActionResult<object>> GetJogo(Guid idJogo)
+        public async Task<ActionResult<JogoViewDto>> GetJogo(Guid idJogo)
         {
             return Ok();
         }
 
         [HttpPost]
-        public async Task<ActionResult<object>> InserirJogo(object jogo)
+        public async Task<ActionResult<JogoViewDto>> InserirJogo(JogoInputDto jogo)
         {
             return Ok();
         }
 
         [HttpPut("{idJogo:guid}")]
-        public async Task<ActionResult> AtualizarJogo(Guid idJogo, object jogo)
+        public async Task<ActionResult> AtualizarJogo(Guid idJogo, JogoInputDto jogo)
         {
             return Ok();
         }
