@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ApiCatalogoJogos.Services
 {
-    public interface IJogoService
+    public interface IJogoService : IDisposable
     {
         Task<List<JogoViewDto>> ObterListaJogo(int pagina, int quantidade);
         Task<JogoViewDto> ObterJogo(Guid id);
