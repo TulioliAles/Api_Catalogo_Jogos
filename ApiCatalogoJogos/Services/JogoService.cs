@@ -52,7 +52,7 @@ namespace ApiCatalogoJogos.Services
 
         public async Task<JogoViewDto> InserirJogo(JogoInputDto jogo)
         {
-            var entidadeJogo = await _jogoRepository.InserirJogo(jogo.Nome, jogo.Produtora);
+            var entidadeJogo = await _jogoRepository.ObterProdutora(jogo.Nome, jogo.Produtora);
 
             if (entidadeJogo.Count() > 0)
                 throw new JogoJaCadastradoException();
