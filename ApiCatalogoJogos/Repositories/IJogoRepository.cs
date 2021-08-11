@@ -9,7 +9,7 @@ namespace ApiCatalogoJogos.Repositories
     {
         Task<List<Jogo>> ObterListaJogo(int pagina, int quantidade);
         Task<Jogo> ObterJogo(Guid id);
-        Task<List<Jogo>> InserirJogo(string nome, string produtora);
+        Task<List<Jogo>> ObterProdutora(string nome, string produtora);
         Task InserirJogo(Jogo jogo);
         Task AtualizarJogo(Jogo jogo);
         Task RemoverJogo(Guid id);
